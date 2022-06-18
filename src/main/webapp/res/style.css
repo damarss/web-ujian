@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+
+:root {
+    --color1: #BFBEF2;
+    --color1-inner: #9290ED;
+    --color2: #BEF2D3;
+    --color2-inner: #75D99D;
+    --color3: #F2FFA4;
+    --color3-inner: #D3E950;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+/* --- sidebar --- */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 10px;
+    width: 280px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50px 1fr 225px;
+    gap: 10px;
+    position: fixed;
+    border-right: 1px solid #E5E5E5;
+}
+
+.sidebar header {
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    display: flex;
+    width: 190px;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 25px 5px 5px;
+    border-radius: 3px 7px 7px 3px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a.active {
+    background-color: rgba(25, 118, 210, 0.3);
+}
+
+nav img {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.logo * {
+    padding: 0;
+    margin: 0;
+}
+
+.logo a {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.logo-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-txt h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo-txt p {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-card {
+    border-top: 1px solid #E5E5E5;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card p {
+    font-size: 16px;
+    text-align: center;
+}
+
+img.profile-pict {
+    width: 75px;
+    height: 75px;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+/* --- Login --- */
+.form-login {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 420px;
+    height: auto;
+    padding: 38px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+form h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid black;
+    border-radius: 13px;
+}
+
+[type = "radio"] {
+	height: 35px;
+}
+
+.form-login .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+form button {
+	border: none;
+	cursor: pointer;
+}
+
+.form-login button {
+    align-self: flex-end;
+}
+
+#errMsg {
+	padding: 0 auto;
+	text-align: center;
+	color: red;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/* --- form buat --- */
+.form-buat {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 525px;
+    height: auto;
+    padding: 25px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.buat-soal {
+	width: 75%;
+}
+
+form textarea {
+	resize: none;
+	height: 150px;
+}
+
+
+
+/* --- buat soal --- */
+.form-buat-soal {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.buat-soal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: auto;
+    padding: 25px 50px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.number {
+	display: inline-block;
+	text-align: center;
+	width: auto;
+	min-width: 30px;
+	background-color: #1976D2;
+	color: #fff;
+	padding: 0 5px;
+}
+
+.nomor-soal {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 3px solid #000;
+	padding-bottom: 5px;
+}
+
+.option {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.option [type = "text"] {
+	border: none;
+}
+
+.option [type = "radio"] {
+	width: 100px;
+}
+
+
+
+/* --- main --- */
+main {
+    grid-area: main;
+    background-color: #F8F8F8;
+    padding: 10px;
+}
+
+.main-container {
+    background-color: #fff;
+    min-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* -- Ujian/Kuis -- */
+.tidak-tersedia {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	height: 200px;
+}
+
+.tidak-tersedia .image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	background-color: #ECECEC;
+	border-radius: 50%;
+}
+
+.tidak-tersedia img {
+	width: 100px;
+	height: auto;
+}
+
+.tidak-tersedia .content {
+	font-size: 21px;
+	font-weight: 500;
+}
+
+
+/* --- table --- */
+table {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+tr td {
+    padding: 5px 0;
+}
+
+th, td {
+	border: 1.5px solid black;
+}
+
+th {
+	background-color: rgba(0,0,0,0.05);
+	height: 36px;
+}
+
+.action-wrapper {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Identitas Ujian */
+.identitas-ujian, .peraturan-ujian {
+    grid-area: identitas-ujian;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.peraturan-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.identitas-ujian {
+    text-align: center;
+    padding: 30px 50px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+table.identitas {
+	border: none;
+	display: block;
+	text-align: left;
+}
+
+table.identitas th {
+	background-color: transparent;
+}
+
+table.identitas * {
+	border: none;
+}
+
+table.identitas td {
+	padding-left: 25px;
+}
+
+table.identitas td::before {
+	content: ": ";
+}
+
+.peraturan-ujian {
+    grid-area: peraturan-ujian;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    text-align: justify;
+}
+
+button.btn {
+	padding: 7px 25px;
+	bottom: 10px;
+    border: none;
+}
+
+.peraturan-ujian form {
+    width: auto;
+}
+
+
+
+/* --- other components --- */
+.btn {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 7px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #1976D2;
+    color: #fff;
+    width: auto;
+    max-width: 150px;
+    text-align: center;
+    margin: 7px 0;
+    cursor: pointer;
+}
+
+a.logout {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #ECECEC;
+}
+
+.logout img {
+    width: 16px;
+    height: 16px;
+}
+
+.reveal-btn {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 50px;
+    bottom: 125px;
+}
+
+img.reveal-btn {
+    width: 25px;
+}
+
+a.cons, .cons {
+	background-color: #FF4D4D; 
+}
+
+.btn.plus {
+	border-radius: 50%;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	font-size: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+input.datetime::after {
+	content: "Batas Pengerjaan";
+}
+
+.MENUNGGU, .DITOLAK, .DISETUJUI {
+    display: inline-block;
+    width: auto;
+    min-width: 115px;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.MENUNGGU {
+    background-color: #C4C4C4;
+}
+
+.DITOLAK {
+    background-color: #FF4D4D;
+}
+
+.DISETUJUI {
+    background-color: #18EA6C;
+}
+
+
+/* -- form atur jadwal -- */
+#jadwal {
+    background-color: #fff;
+    position: fixed;
+    width: 75%;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+/* -- halaman ujian & kuis mahasiswa -- */
+.cur-ujian {
+    display: flex;
+    width: 100%;
+}
+
+.cur-ujian-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cur-ujian img {
+    height: 250px;
+}
+
+.cur-ujian-jenis {
+    background-color: rgba(25,118,210,0.1);
+    width: 230px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #1976D2;
+    font-size: 17px;
+}
+
+.cur-ujian-matkul {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cur-ujian-dosen, .cur-ujian-idt {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cur-ujian-dosen img, .cur-ujian-idt img {
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.cur-ujian-mulai a.btn {
+    min-width: 200px;
+}
+
+#next-ujian {
+    display: none;
+}
+
+#next-ujian h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.ujian-next {
+    display: flex;
+    gap: 15px;
+    min-width: 350px;
+    width: 350px;
+    height: 135px;
+    align-items: center;
+    padding: 15px;
+}
+
+.ujian-next, .icon {
+    border-radius: 10px;
+}
+
+#matkul-next {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ujian-next .icon {
+    height: 55px;
+    width: 55px;
+    padding: 10px;
+}
+
+.ujian-next .icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.ujian-next-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper-next {
+    display: flex;
+    gap: 15px;
+    width: 75vw;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.kuis {
+    cursor: pointer;
+}
+
+/* -- rekap -- */
+#rekap-mhs {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    position: fixed;
+    background-color: #fff;
+    display: none;
+    overflow: auto;
+}
+
+#rekap-mhs h1 {
+    margin-bottom: 15px;
+}
+
+#rekap-mhs table {
+    width: 100%;
+}
+
+#rekap-close {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+#rekap-close.btn {
+    padding: 0;
+}
+
+/* -- dashboard wrapper -- */
+.dashboard-wrapper {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+#piechart, #piechart2 {
+    border-radius: 15px;
+    height: 375px;
+    overflow: hidden;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#piechart {
+    background-color: #BEF2D3;
+}
+
+#piechart2 {
+    background-color: #BFBEF2;
+}

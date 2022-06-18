@@ -1,0 +1,141 @@
+main {
+	display: grid;
+	grid-template-areas:
+	"soal-container label-no"
+	"soal-container nomor"
+	"soal-container submit";
+	grid-template-rows: 70px 1fr 100px;
+	grid-template-columns: 1fr 285px;
+	max-height: 100vh;
+	gap: 15px;
+}
+
+.soal-container, .label-no, .nomor, .submit, .no {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 7px;
+}
+
+.soal-container {
+	grid-area: soal-container;
+	overflow: auto;
+	padding: 15px;
+	padding-bottom: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.soal {
+	margin-top: 15px;
+	font-size: 18px;
+	position: relative;
+	min-height: 70vh;
+	padding-bottom: 10px;
+}
+
+[type = "radio"] {
+	transform: scale(0.8);
+}
+
+.option-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+}
+
+.navigation {
+	display: flex;
+	position: sticky;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 5px;
+	justify-content: space-between;
+}
+
+.prev, .next {
+	max-width: 200px;
+}
+
+.label-no, .submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.submit {
+	flex-direction: column;
+}
+
+.label-no {
+	grid-area: label-no;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.nomor {
+	grid-area: nomor;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.nomor-soal h1 {
+	font-size: 24px;
+}
+
+.no {
+	background-color: #C4C4C4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
+	font-weight: 700;
+	font-size: 21px;
+	cursor: pointer;
+}
+
+.no.marked, .marker {
+	background-color: #FDB833;
+	color: #fff;
+}
+
+.no.answered {
+	background-color: #00B300;
+	color: #fff;
+}
+
+.submit {
+	grid-area: submit;
+}
+
+.submit a {
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px 15px;
+}
+
+#soal-text {
+	display: block;
+	margin-bottom: 25px;
+}
+
+#time {
+	background-color: #000;
+	color: #fff;
+	padding: 2px 35px;
+	border-radius: 7px;
+}
+
+button.btn {
+	border: none;
+}
