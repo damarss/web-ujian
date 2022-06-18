@@ -97,7 +97,7 @@
 
 		function loadSoal() {
 			number.innerText = nomor;
-			const url = "http://localhost:8080/get-soal-ujian?id_ujian=<%=session.getAttribute("idUjian") %>&nomor=" + nomor;
+			const url = "https://web-ujian.herokuapp.com/get-soal-ujian?id_ujian=<%=session.getAttribute("idUjian") %>&nomor=" + nomor;
 			fetch(url)
 					.then(async (response) => {
 						return response.json();
@@ -132,7 +132,7 @@
 		}
 
 		function updateJawaban() {
-			fetch("http://localhost:8080/get-jawaban-user?id_soal=" + currentSoal.id)
+			fetch("https://web-ujian.herokuapp.com/get-jawaban-user?id_soal=" + currentSoal.id)
 					.then((response) => {
 						return response.json();
 					})
@@ -151,7 +151,7 @@
 		loadSoal();
 
 		function saveJawaban(jawaban) {
-			fetch("http://localhost:8080/save-jawaban-ujian", {
+			fetch("https://web-ujian.herokuapp.com/save-jawaban-ujian", {
 				method: "POST",
 				body: JSON.stringify({
 					jawabanUser: jawaban,

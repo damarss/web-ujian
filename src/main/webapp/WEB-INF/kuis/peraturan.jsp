@@ -81,7 +81,7 @@
 		let jumlahSoal = document.getElementById("jumlah-soal");
 		let namaKuis = document.getElementById("nama-kuis");
 
-		fetch("http://localhost:8080/get-current-kuis?id_kuis=<%=session.getAttribute("idKuis") %>")
+		fetch("https://web-ujian.herokuapp.com/get-current-kuis?id_kuis=<%=session.getAttribute("idKuis") %>")
 			.then(async (response) => {
 				return response.json();
 			})

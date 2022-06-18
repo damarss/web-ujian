@@ -72,7 +72,7 @@
 		let waktu = document.getElementById("waktu");
 		let jumlahSoal = document.getElementById("jumlah-soal");
 
-		fetch("http://localhost:8080/get-current-ujian?id_ujian=<%=session.getAttribute("idUjian") %>")
+		fetch("https://web-ujian.herokuapp.com/get-current-ujian?id_ujian=<%=session.getAttribute("idUjian") %>")
 			.then(async (response) => {
 				return response.json();
 			})
