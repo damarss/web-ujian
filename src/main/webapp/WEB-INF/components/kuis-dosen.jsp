@@ -14,7 +14,7 @@
     var kuis = document.getElementById("tbl-kuis");
     var dataKuis = null;
 
-    fetch("http://localhost:8080/get-kuis")
+    fetch("web-ujian.herokuapp.com/get-kuis")
         .then(async (response) => {
             return response.json();
         })

@@ -34,7 +34,7 @@
         <script>
             var soal = document.getElementById("soal");
             var currentSoal = null;
-            const url = "http://localhost:8080/<%=request.getAttribute("url") %>" ;
+            const url = "web-ujian.herokuapp.com/<%=request.getAttribute("url") %>" ;
             fetch(url)
                 .then((response) => {
                     return response.json();
@@ -73,7 +73,7 @@
                 })
 
             var jawaban;
-            const url2 = "http://localhost:8080/<%=request.getAttribute("url2") %>";
+            const url2 = "web-ujian.herokuapp.com/<%=request.getAttribute("url2") %>";
             fetch(url2)
                 .then(async (response) => {
                     return response.json();

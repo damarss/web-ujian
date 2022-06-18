@@ -20,7 +20,7 @@ ${ujian}
     var matkulNext = document.getElementById("matkul-next");
     var batasNext = document.getElementById("batas-next");
 
-    fetch("http://localhost:8080/get-ujian-mahasiswa")
+    fetch("web-ujian.herokuapp.com/get-ujian-mahasiswa")
         .then(async (response) => {
             return response.json();
         })

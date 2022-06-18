@@ -39,7 +39,7 @@
     var ujian = document.getElementById("tbl-ujian");
     var dataUjian = null;
 
-    fetch("http://localhost:8080/get-ujian")
+    fetch("web-ujian.herokuapp.com/get-ujian")
         .then(async (response) => {
             return response.json();
         })

@@ -19,7 +19,7 @@ ${kuis}
     var matkulNext = document.getElementById("matkul-next");
     var batasNext = document.getElementById("batas-next");
 
-    fetch("http://localhost:8080/get-kuis-mahasiswa")
+    fetch("web-ujian.herokuapp.com/get-kuis-mahasiswa")
         .then(response => {return response.json()})
         .then(result => {saveKuis(result)})
 
@@ -27,7 +27,7 @@ ${kuis}
         dataKuis = data;
     }
 
-    fetch("http://localhost:8080/get-kuis-mahasiswa")
+    fetch("web-ujian.herokuapp.com/get-kuis-mahasiswa")
         .then((response) => {
             return response.json();
         })

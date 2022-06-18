@@ -12,7 +12,7 @@
     var rekap;
 
     function loadUjian() {
-        const url = "http://localhost:8080/get-ujian";
+        const url = "web-ujian.herokuapp.com/get-ujian";
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -24,7 +24,7 @@
     }
 
     function loadPiechartUjian() {
-        const url = "http://localhost:8080/get-rekap-mahasiswa";
+        const url = "web-ujian.herokuapp.com/get-rekap-mahasiswa";
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -63,7 +63,7 @@
     loadUjian();
 
     function loadKuis() {
-        const url = "http://localhost:8080/get-kuis";
+        const url = "web-ujian.herokuapp.com/get-kuis";
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -75,7 +75,7 @@
     }
 
     function loadPieChartKuis() {
-        const url = "http://localhost:8080/get-rekap-mahasiswa";
+        const url = "web-ujian.herokuapp.com/get-rekap-mahasiswa";
         fetch(url)
             .then((response) => {
                 return response.json();

@@ -10,7 +10,7 @@
 
     // Draw the chart and set the chart values
     function drawChart() {
-        fetch("http://localhost:8080/get-user")
+        fetch("web-ujian.herokuapp.com/get-user")
             .then((response) => {
                 return response.json();
             })
