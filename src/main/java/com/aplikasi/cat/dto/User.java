@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_app")
 @Builder
 public class User {
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
@@ -23,11 +23,12 @@ public class User {
 	@OneToMany(mappedBy = "id_user", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<JawabanUser> jawabanUser;
-	
+
 	public User() {
 	}
 
-	public User(Long id, String username, String password, String namaLengkap, int role, Set<Rekap> rekap, Set<JawabanUser> jawabanUser) {
+	public User(Long id, String username, String password, String namaLengkap, int role, Set<Rekap> rekap,
+			Set<JawabanUser> jawabanUser) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
@@ -40,30 +41,39 @@ public class User {
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getNamaLengkap() {
 		return namaLengkap;
 	}
+
 	public void setNamaLengkap(String namaLengkap) {
 		this.namaLengkap = namaLengkap;
 	}
+
 	public int getRole() {
 		return role;
 	}
+
 	public void setRole(int role) {
 		this.role = role;
 	}
@@ -73,5 +83,5 @@ public class User {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", namaLengkap=" + namaLengkap
 				+ ", role=" + role + "]";
 	}
-	
+
 }
