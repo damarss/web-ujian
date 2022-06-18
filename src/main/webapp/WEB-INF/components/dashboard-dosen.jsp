@@ -6,7 +6,7 @@
 <script type="text/javascript">
     var ujian;
 
-    fetch("web-ujian.herokuapp.com/get-ujian")
+    fetch("https://web-ujian.herokuapp.com/get-ujian")
         .then((response) => {
             return response.json();
         })

@@ -60,7 +60,7 @@
             }
 
             function loadUjian() {
-                fetch("web-ujian.herokuapp.com/get-ujian")
+                fetch("https://web-ujian.herokuapp.com/get-ujian")
                     .then(async (response) => {
                         return response.json();
                     })
@@ -80,7 +80,7 @@
             loadUjian();
 
             function loadKuis() {
-                fetch("web-ujian.herokuapp.com/get-kuis")
+                fetch("https://web-ujian.herokuapp.com/get-kuis")
                     .then(async (response) => {
                         return response.json();
                     })
@@ -105,7 +105,7 @@
             loadKuis();
 
             function loadRekap(idUjian = 0, idKuis = 0) {
-                const url = "web-ujian.herokuapp.com/<%=request.getAttribute("url") %>"
+                const url = "https://web-ujian.herokuapp.com/<%=request.getAttribute("url") %>"
                 fetch(url)
                     .then((response) => {
                         return response.json();

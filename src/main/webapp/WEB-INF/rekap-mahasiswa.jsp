@@ -42,7 +42,7 @@
             var tabelKuis = document.getElementById("tbl-kuis");
 
             function loadRekap() {
-                const url = "web-ujian.herokuapp.com/<%=request.getAttribute("url") %>"
+                const url = "https://web-ujian.herokuapp.com/<%=request.getAttribute("url") %>"
                 fetch(url)
                     .then((response) => {
                         return response.json();
