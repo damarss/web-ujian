@@ -12,6 +12,6 @@ public interface KuisRepo extends JpaRepository<Kuis, Long> {
     @Query(value = "SELECT * FROM kuis WHERE id = :id", nativeQuery = true)
     Kuis findKuisById(@Param("id") Long idKuis);
 
-    @Query(value = "SELECT * FROM kuis WHERE batas_waktu > LOCALTIME ORDER BY batas_waktu", nativeQuery = true)
+    @Query(value = "SELECT * FROM kuis WHERE batas_waktu > CURRENT_DATE ORDER BY batas_waktu", nativeQuery = true)
     List<Kuis> findKuisAvailable();
 }

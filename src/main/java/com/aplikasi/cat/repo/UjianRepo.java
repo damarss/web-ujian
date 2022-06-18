@@ -12,6 +12,6 @@ public interface UjianRepo extends JpaRepository<Ujian, Long> {
     @Query(value = "SELECT * FROM Ujian WHERE id = :id", nativeQuery = true)
     Ujian findUjianById(@Param("id") Long idUjian);
 
-    @Query(value = "SELECT * FROM Ujian WHERE status = 0 AND tanggal_pelaksanaan > LOCALTIME ORDER BY tanggal_pelaksanaan", nativeQuery = true)
+    @Query(value = "SELECT * FROM Ujian WHERE status = 0 AND tanggal_pelaksanaan > CURRENT_DATE ORDER BY tanggal_pelaksanaan", nativeQuery = true)
     List<Ujian> findUjianMahasiswa();
 }
