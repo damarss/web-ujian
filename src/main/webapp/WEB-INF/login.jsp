@@ -24,8 +24,10 @@
 
             .modal {
                 display: flex;
-                height: 100vh;
+                height: 75vh;
                 width: 100vw;
+                position: absolute;
+                justify-content: center;
             }
 
             .modal-content {
@@ -34,10 +36,10 @@
                 justify-content: center;
                 gap: 10px;
                 align-items: center;
-                background-color: #f1f1f1;
-                padding: 20px;
+                background-color: #fff;
+                padding: 75px;
                 border-radius: 10px;
-                box-shadow: 0px 0px 10px #000;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
             }
         </style>
     </head>
@@ -50,11 +52,11 @@
                     <input type="text" name="username" placeholder="Username / NIM"/>
                     <input type="password" name="password" id="password" placeholder="Password"/>
                     <img class="reveal-btn" onclick="revealPassword(this)" src="./assets/reveal.png" alt="reveal password"/>
-                    <button class="btn login" type="submit">Login</button>
+                    <button class="btn login">Login</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
-                        <p>Berikut ini akun yang dapat digunakan</p>
+                        <h3>Berikut ini akun yang dapat digunakan</h3>
                         <ul>
                             <li>Username: dosen | Password: dosen</li>
                             <li>Username: mahasiswa | password: mahasiswa</li>
