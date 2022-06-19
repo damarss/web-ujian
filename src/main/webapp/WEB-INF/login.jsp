@@ -52,7 +52,7 @@
                     <input type="text" name="username" placeholder="Username / NIM"/>
                     <input type="password" name="password" id="password" placeholder="Password"/>
                     <img class="reveal-btn" onclick="revealPassword(this)" src="./assets/reveal.png" alt="reveal password"/>
-                    <button class="btn login" type="button">Login</button>
+                    <button class="btn login">Login</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
@@ -65,7 +65,7 @@
                             <li>Username: mahasiswa4 | password: mahasiswa4</li>
                             <li>Username: mahasiswa5 | password: mahasiswa5</li>
                         </ul>
-                        <button class="btn" onclick="closeModal()">Tutup</button>
+                        <button class="btn" type="button" onclick="closeModal()">Tutup</button>
                     </div>
                 </div>
             </form>
