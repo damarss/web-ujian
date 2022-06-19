@@ -21,6 +21,24 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            .modal {
+                display: flex;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .modal-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                background-color: #f1f1f1;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px #000;
+            }
         </style>
     </head>
     <body onload="showErrMsg()">
@@ -34,9 +52,28 @@
                     <img class="reveal-btn" onclick="revealPassword(this)" src="./assets/reveal.png" alt="reveal password"/>
                     <button class="btn login" type="submit">Login</button>
                 </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <p>Berikut ini akun yang dapat digunakan</p>
+                        <ul>
+                            <li>Username: dosen | Password: dosen</li>
+                            <li>Username: mahasiswa | password: mahasiswa</li>
+                            <li>Username: mahasiswa2 | password: mahasiswa2</li>
+                            <li>Username: mahasiswa3 | password: mahasiswa3</li>
+                            <li>Username: mahasiswa4 | password: mahasiswa4</li>
+                            <li>Username: mahasiswa5 | password: mahasiswa5</li>
+                        </ul>
+                        <button class="btn" onclick="closeModal()">Tutup</button>
+                    </div>
+                </div>
             </form>
         </main>
         
         <script src="./script.js"></script>
+        <script>
+            function closeModal() {
+                document.querySelector('.modal').style.display = 'none';
+            }
+        </script>
     </body>
 </html>
