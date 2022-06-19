@@ -52,7 +52,7 @@
                     <input type="text" name="username" placeholder="Username / NIM"/>
                     <input type="password" name="password" id="password" placeholder="Password"/>
                     <img class="reveal-btn" onclick="revealPassword(this)" src="./assets/reveal.png" alt="reveal password"/>
-                    <button class="btn login">Login</button>
+                    <button class="btn login" type="button">Login</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
